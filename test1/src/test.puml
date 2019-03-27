@@ -1,0 +1,39 @@
+@startuml
+|教务处|
+start
+:安排考试;
+:考试安排表;
+|#AntiqueWhite|教师|
+if (出卷) then
+  :A,B试卷;
+else
+  :打印审批表;
+    |#AntiqueWhite|系主任|
+    :审批签字;
+    :打印审批表;
+endif
+ |#AntiqueWhite|教务处|
+ :打印试卷;
+ :试卷;
+|#AntiqueWhite|学生|
+:参加考试;
+:答卷;
+|#AntiqueWhite|教师|
+if (阅卷出成绩) then
+  :答卷;
+  :装订存档;
+else
+ |#AntiqueWhite|教务处|
+   if (有不及格?) then (yes)
+     :安排补考;
+     :补考安排表;
+   else (no)
+     :;
+   endif
+    :;
+ endif
+ |#AntiqueWhite|教师|
+  :期末流程结束;
+
+
+@enduml
