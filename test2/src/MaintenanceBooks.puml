@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+actor 图书管理员
+
+rectangle 维护图书 {
+图书管理员 -- (维护图书)
+(维护图书) <. (验证读者信息): 包含
+(检查是否超出可借数量) .> (维护图书) : 包含
+(维护图书) <.(修改图书库存): 包含
+}
+
+@enduml
+=

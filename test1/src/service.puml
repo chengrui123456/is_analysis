@@ -18,7 +18,6 @@ start
            :安排工人;
          fork again
            :安排材料;
-           detach
          endfork;
     endif
      :填写派工单;

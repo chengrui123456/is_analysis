@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+
+skinparam packageStyle rect
+actor 图书管理员
+actor 读者
+
+rectangle  归还图书 {
+读者 -- (归还图书)
+(归还图书) <. (验证读者信息): 包含
+(检查可借数量是否正确) .> (归还图书) : 包含
+(归还图书) <.(修改图书库存): 包含
+(归还图书)--> 图书管理员
+}
+
+@enduml

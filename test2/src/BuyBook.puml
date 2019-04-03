@@ -1,0 +1,32 @@
+@startuml
+|读者|
+start
+:登陆系统;
+:查询书籍;
+:提示管理员没有该书籍;
+|#AntiqueWhite|图书管理员|
+ if (是否为新书?) then (yes)
+     :登记书本信息;
+   endif
+    :制定购买方案;
+    :提交方案给领导过目;
+ |#AntiqueWhite|领导|
+ if (审核是否通过?) then (yes)
+     :购买书籍;
+      fork
+           :安排工人;
+         fork again
+           :安排时间;
+           endfork;
+       else(no)
+       stop
+    endif
+|#AntiqueWhite|工人|
+:领取书籍;
+:搬运至图书馆;
+|#AntiqueWhite|图书管理员|
+:签收;
+:登陆系统;
+:更新书本信息并提示读者;
+stop
+@enduml

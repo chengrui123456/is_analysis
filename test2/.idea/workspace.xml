@@ -159,7 +159,7 @@
       <workItem from="1553522218606" duration="2598000" />
       <workItem from="1553560527346" duration="1833000" />
       <workItem from="1553562415271" duration="880000" />
-      <workItem from="1553743160831" duration="499000" />
+      <workItem from="1553743160831" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/chengrui123456/is_analysis&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
       <created>1553562571928</created>
@@ -172,7 +172,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5810000" />
+    <option name="totallyTimeSpent" value="5591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="81" y="30" width="1400" height="776" extended-state="0" />
