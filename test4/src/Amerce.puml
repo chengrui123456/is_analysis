@@ -24,7 +24,7 @@ deactivate 读者
 deactivate c
 activate 图书管理员
 deactivate b
-图书管理员 -> 读者:提示读者还书成功
+图书管理员 -> 读者:提示读者罚款已交，可放心借书
 activate 读者
 deactivate 图书管理员
 deactivate 读者

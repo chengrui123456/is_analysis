@@ -17,6 +17,8 @@ activate 图书管理员
 deactivate 图书管理员
 activate a
 a -> b:显示图书信息，并更新可借数量
+activate b
+deactivate b
 activate 图书管理员
 deactivate b
 图书管理员 -> 读者:提示读者还书成功
