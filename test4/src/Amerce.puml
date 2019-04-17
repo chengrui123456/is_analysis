@@ -1,0 +1,33 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 10
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+actor 读者
+actor 图书管理员
+participant "登陆" as a
+participant "图书" as b
+participant "逾期记录" as c
+
+activate 读者
+读者 -> a: 用户登陆
+deactivate 读者
+activate a
+a -> 读者: 系统提示读者有书本逾期。
+deactivate a
+activate 读者
+读者 -> c: 用户查看逾期记录
+activate c
+
+读者-> 图书管理员:提交罚款
+deactivate 读者
+deactivate c
+activate 图书管理员
+deactivate b
+图书管理员 -> 读者:提示读者还书成功
+activate 读者
+deactivate 图书管理员
+deactivate 读者
+
+
+@enduml

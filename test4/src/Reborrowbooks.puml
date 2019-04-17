@@ -1,0 +1,42 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+actor 图书管理员
+actor "读者" as a
+participant "登陆" as b
+participant "图书" as c
+participant "借书记录" as d
+participant "逾期记录" as e
+
+activate 图书管理员
+图书管理员 -> b: 登陆系统
+activate b
+deactivate b
+图书管理员 -> a: 验证读者信息
+activate a
+deactivate a
+loop
+activate c
+c-> d: 生成借书记录
+deactivate c
+activate d
+d-> a:更新读者信息
+activate a
+deactivate d
+deactivate a
+end
+图书管理员 -> d:打印借书记录
+activate d
+deactivate d
+
+图书管理员->a: 显示借书成功
+activate a
+deactivate a
+opt
+图书管理员 -> e:登记逾期记录
+activate e
+deactivate e
+end
+@enduml
