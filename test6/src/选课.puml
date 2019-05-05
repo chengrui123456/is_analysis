@@ -1,0 +1,14 @@
+@startuml
+title 基于GitHub的实验管理平台--评定成绩用例的顺序图
+actor students
+actor teachers
+teachers -> school:发布可选择的科目
+
+school -> students:现在可进行选课
+== 查看老师列表 ==
+students -> students : 登陆
+students -> school :输入年级
+school -> teachers:查看可选择的老师
+== 确定选择的课程 ==
+students -> teachers : 选课成功
+@enduml
