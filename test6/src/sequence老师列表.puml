@@ -1,0 +1,13 @@
+@startuml
+title 基于GitHub的实验管理平台--学生列表用例的顺序图
+actor users
+users -> teachers: 查看所有老师列表
+alt 如果users是老师或者管理员，且登录
+	teachers --> users:每个老师的信息
+else 如果users是students，未登录
+    students --> users:无法获取信息
+else 如果users是students，且登录
+        students --> users:可选择授课老师
+end
+
+@enduml
